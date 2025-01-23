@@ -9,7 +9,7 @@ import {
   PaginationItem,
   PaginationLink,
   PaginationEllipsis,
-} from "@/components/atoms/pagination";
+} from "@/components/ui/pagination";
 
 interface PaginationProps {
   currentPage: number;

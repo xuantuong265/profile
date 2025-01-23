@@ -1,7 +1,18 @@
-import MyCv from "@/components/organisms/cv/my-cv";
+import CvContent from "@/components/features/cv/cv-content";
+import NavDesktop from "@/components/features/cv/nav-desktop";
 
 const CvPage = () => {
-  return <MyCv />;
+  return (
+    <div className="w-full h-screen flex">
+      <div className="w-[280px]">
+        <NavDesktop />
+      </div>
+
+      <div className="flex flex-1">
+        <CvContent />
+      </div>
+    </div>
+  );
 };
 
 export default CvPage;

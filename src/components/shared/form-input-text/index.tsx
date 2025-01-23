@@ -6,8 +6,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/atoms/form";
-import { Input } from "@/components/atoms/input";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
 type FormInputTextProps = {
   control: any;
