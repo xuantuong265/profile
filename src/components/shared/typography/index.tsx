@@ -5,7 +5,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 type TypographyProps = {
-  variant?: "h1" | "h2" | "h3" | "p";
+  variant?: "h1" | "h2" | "h3" | "p" | "span";
   className?: string;
   children: React.ReactNode;
 };
@@ -20,6 +20,7 @@ const Typography = ({
     h2: "w-full scroll-m-20 text-3xl font-semibold tracking-tight",
     h3: "w-full scroll-m-20 text-2xl font-semibold tracking-tight",
     p: "leading-7 text-base",
+    span: "text-base",
   };
 
   const Component = variant as keyof JSX.IntrinsicElements;

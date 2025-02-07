@@ -1,7 +1,11 @@
+"use client";
+
+import { LoginForm } from "@/components/features/auth";
+
 const LoginPage = () => {
   return (
     <div>
-      <h1>login page</h1>
+      <LoginForm />
     </div>
   );
 };

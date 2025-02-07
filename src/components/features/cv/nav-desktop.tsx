@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 
-import { CATEGORY_CV } from "@/constants/constant";
+import { CATEGORY_CV } from "@/constants";
 import { Typography } from "@/components/shared";
 
 const NavDesktop = () => {
