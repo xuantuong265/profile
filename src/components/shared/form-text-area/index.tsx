@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Control } from "react-hook-form";
+import { type Control } from "react-hook-form";
 
 import {
   FormControl,
@@ -18,13 +18,13 @@ type FormTextAreaProps = React.ComponentProps<typeof Textarea> & {
   formLabel?: string;
 };
 
-const FormTextArea: React.FC<FormTextAreaProps> = ({
+const FormTextArea = ({
   control,
   name,
   formLabel,
   className,
   ...rest
-}) => {
+}: FormTextAreaProps) => {
   return (
     <FormField
       control={control}
@@ -33,10 +33,7 @@ const FormTextArea: React.FC<FormTextAreaProps> = ({
         <FormItem className={className}>
           {formLabel && <FormLabel>{formLabel}</FormLabel>}
           <FormControl>
-            <Textarea
-              {...field}
-              {...rest}
-            />
+            <Textarea {...field} {...rest} />
           </FormControl>
           <FormMessage />
         </FormItem>

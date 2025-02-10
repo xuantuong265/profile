@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-import { RegistrationData } from "@/types/auth";
+import { type RegistrationData } from "@/types/auth";
 import { StepRegisterEnum } from "@/enums";
 
 interface RegisterState {

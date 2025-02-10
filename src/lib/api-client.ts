@@ -1,10 +1,10 @@
 "use client";
 
 import axios, {
-  AxiosInstance,
-  AxiosResponse,
-  AxiosError,
-  InternalAxiosRequestConfig,
+  type AxiosInstance,
+  type AxiosResponse,
+  type AxiosError,
+  type InternalAxiosRequestConfig,
 } from "axios";
 
 interface Auth {

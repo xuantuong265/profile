@@ -3,7 +3,7 @@ import NavDesktop from "@/components/features/cv/nav-desktop";
 
 const CvPage = () => {
   return (
-    <div className="w-full h-screen flex">
+    <div className="flex h-screen w-full">
       <div className="w-[280px]">
         <NavDesktop />
       </div>

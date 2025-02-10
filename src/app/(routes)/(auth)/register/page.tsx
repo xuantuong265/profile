@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  CircleCheckBig,
-  Contact,
-  UserCog,
-} from "lucide-react";
+import { CircleCheckBig, Contact, UserCog } from "lucide-react";
 
 import {
   RegisterStepAccount,
@@ -12,18 +8,14 @@ import {
   RegisterStepSuccess,
 } from "@/components/features/auth";
 import Stepper from "@/components/features/auth/steppers";
-import useRegisterStore from "@/stores/useRegisterStore";
+import useRegisterStore from "@/stores/use-register-store";
 import { StepRegisterEnum } from "@/enums";
 
 const RegisterPage = () => {
   const currentStep = useRegisterStore((state) => state.currentState);
 
   const steps = [
-    {
-      title: "Account",
-      key: StepRegisterEnum.ACCOUNT,
-      icon: <UserCog />,
-    },
+    { title: "Account", key: StepRegisterEnum.ACCOUNT, icon: <UserCog /> },
     {
       title: "Profile Information",
       key: StepRegisterEnum.ACCOUNT_INFO,

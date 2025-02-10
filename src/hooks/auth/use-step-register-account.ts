@@ -3,7 +3,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { REGEX_EMAIL } from "@/constants";
-import useRegisterStore from "@/stores/useRegisterStore";
+import useRegisterStore from "@/stores/use-register-store";
 import { StepRegisterEnum } from "@/enums";
 
 const registerSchema = z

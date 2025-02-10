@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { StepType } from "@/types/auth";
-import { StepRegisterEnum } from "@/enums";
+import { type StepType } from "@/types/auth";
+import { type StepRegisterEnum } from "@/enums";
 import { Typography } from "@/components/shared";
 
 type StepStatus = "wait" | "process" | "finish";
@@ -16,15 +16,14 @@ interface StepperProps {
   titleClassName?: string;
 }
 
-const Stepper: React.FC<StepperProps> = ({
+const Stepper = ({
   current,
   steps,
   className = "",
   stepClassName = "",
   lineClassName = "",
   iconClassName = "",
-  titleClassName = "",
-}) => {
+}: StepperProps) => {
   const currentStepIndex = steps.findIndex((step) => step.key === current);
 
   const getStatus = (index: number, currentIndex: number): StepStatus => {
@@ -37,7 +36,7 @@ const Stepper: React.FC<StepperProps> = ({
   return (
     <ol
       className={cn(
-        "flex items-center w-full text-gray-900 font-medium text-xs sm:text-base",
+        "flex w-full items-center text-xs font-medium text-gray-900 sm:text-base",
         className
       )}
     >
@@ -49,7 +48,7 @@ const Stepper: React.FC<StepperProps> = ({
           <li
             key={index}
             className={cn(
-              "flex w-full relative",
+              "relative flex w-full",
               {
                 "text-indigo-600": status === "process",
                 "text-gray-900": status !== "process",
@@ -57,10 +56,11 @@ const Stepper: React.FC<StepperProps> = ({
               stepClassName
             )}
           >
-            <div className="block whitespace-nowrap z-10">
-              <Typography variant="span"
+            <div className="z-10 block whitespace-nowrap">
+              <Typography
+                variant="span"
                 className={cn(
-                  "w-6 h-6 rounded-full flex justify-center items-center mx-auto mb-3 text-sm lg:w-10 lg:h-10",
+                  "mx-auto mb-3 flex size-6 items-center justify-center rounded-full text-sm lg:size-10",
                   {
                     "bg-indigo-600 border-2 border-transparent text-white":
                       status === "process",
@@ -78,7 +78,7 @@ const Stepper: React.FC<StepperProps> = ({
             {!isLast && (
               <div
                 className={cn(
-                  "absolute w-full h-0.5 lg:top-5 top-3 left-4",
+                  "absolute left-4 top-3 h-0.5 w-full lg:top-5",
                   {
                     "bg-indigo-600": status === "finish",
                     "bg-gray-200": status !== "finish",

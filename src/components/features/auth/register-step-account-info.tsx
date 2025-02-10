@@ -10,14 +10,16 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Form } from "@/components/ui/form";
-import useStepRegisterAccount from "@/hooks/useStepRegisterAccount";
-import { FormInputText } from "@/components/shared";
-import FormTextArea from "@/components/shared/form-text-area";
-import FormDatePicker from "@/components/shared/form-date-picker";
-import FormFileUpload from "@/components/shared/form-file-upload";
+import {
+  FormDatePicker,
+  FormFileUpload,
+  FormInputText,
+  FormTextArea,
+} from "@/components/shared";
+import useStepRegisterAccountInfos from "@/hooks/auth/use-step-register-account-infos";
 
 const RegisterStepAccountInfos = () => {
-  const { form, submitForm } = useStepRegisterAccount();
+  const { form, submitForm } = useStepRegisterAccountInfos();
   const { control } = form;
 
   return (

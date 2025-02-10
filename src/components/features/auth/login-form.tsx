@@ -62,6 +62,6 @@ const LoginForm = () => {
       </Card>
     </div>
   );
-}
+};
 
 export default LoginForm;

@@ -1,5 +1,6 @@
 "use client";
 
+import { type Control } from "react-hook-form";
 import {
   FormControl,
   FormField,
@@ -10,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 
 type FormInputTextProps = {
-  control: any;
+  control: Control<any>;
   name: string;
   formLabel?: string;
   className?: string;

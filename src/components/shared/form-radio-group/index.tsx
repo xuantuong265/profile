@@ -23,14 +23,14 @@ interface FormRadioGroupProps {
   control: Control<any>;
 }
 
-const FormRadioGroup: React.FC<FormRadioGroupProps> = ({
+const FormRadioGroup = ({
   name,
   options,
   formLabel,
   control,
   className,
   ...rest
-}) => {
+}: FormRadioGroupProps) => {
   return (
     <FormField
       control={control}

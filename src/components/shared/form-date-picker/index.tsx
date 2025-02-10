@@ -3,7 +3,7 @@
 import React from "react";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
-import { Control } from "react-hook-form";
+import { type Control } from "react-hook-form";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -20,25 +20,22 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import Typography from "../typography";
+import { Typography } from "@/components/shared";
 
 type FormDatePickerProps = Omit<
   React.ComponentProps<typeof Calendar>,
   "selected" | "onSelect" | "mode"
-> & {
-  control: Control<any>;
-  name: string;
-  formLabel?: string;
-};
+> & { control: Control<any>; name: string; formLabel?: string };
 
-const FormDatePicker: React.FC<FormDatePickerProps> = ({
+const FormDatePicker = ({
   control,
   name,
   formLabel,
   ...rest
-}) => {
+}: FormDatePickerProps) => {
   const { disabled, ...calendarRest } = rest;
-  const defaultDisabled = (date: Date) => date > new Date() || date < new Date("1900-01-01");
+  const defaultDisabled = (date: Date) =>
+    date > new Date() || date < new Date("1900-01-01");
 
   return (
     <FormField
@@ -57,8 +54,14 @@ const FormDatePicker: React.FC<FormDatePickerProps> = ({
                     !field.value && "text-muted-foreground"
                   )}
                 >
-                  {field.value ? format(field.value, "PPP") : <Typography variant="span">Pick a date</Typography>}
-                  <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                  {field.value ? (
+                    format(field.value, "PPP")
+                  ) : (
+                    <Typography variant="span" className="text-xs">
+                      Pick a date
+                    </Typography>
+                  )}
+                  <CalendarIcon className="ml-auto size-4 opacity-50" />
                 </Button>
               </FormControl>
             </PopoverTrigger>

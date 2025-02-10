@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Form } from "@/components/ui/form";
-import useStepRegisterAccount from "@/hooks/useStepRegisterAccount";
+import useStepRegisterAccount from "@/hooks/auth/use-step-register-account";
 import { FormInputText } from "@/components/shared";
 
 interface RegisterStepAccountProps {
@@ -68,7 +68,7 @@ const RegisterStepAccount = ({
                 </div>
 
                 <Button type="submit" className="w-full">
-                  Register
+                  Next
                 </Button>
               </div>
               <div className="mt-4 text-center text-sm">

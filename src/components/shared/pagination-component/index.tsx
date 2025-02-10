@@ -19,13 +19,13 @@ interface PaginationProps {
   ellipsisThreshold?: number;
 }
 
-const PaginationComponent: React.FC<PaginationProps> = ({
+const PaginationComponent = ({
   currentPage,
   totalPages,
   onPageChange,
   hrefBuilder,
   ellipsisThreshold = 2,
-}) => {
+}: PaginationProps) => {
   const router = useRouter();
 
   const pages = useMemo(() => {

@@ -5,12 +5,12 @@ import { Typography } from "@/components/shared";
 
 const NavDesktop = () => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-[#38ADA9]">
-      <div className="mb-6 border-8 border-[#88CECB] rounded-full">
+    <div className="flex h-screen flex-col items-center justify-center bg-[#38ADA9]">
+      <div className="mb-6 rounded-full border-8 border-[#88CECB]">
         <img
           src="https://www.w3schools.com/howto/img_avatar.png"
           alt="Avatar"
-          className="object-cover rounded-full"
+          className="rounded-full object-cover"
           width={160}
           height={160}
         />
@@ -21,7 +21,7 @@ const NavDesktop = () => {
           <li key={key} className="cursor-pointer">
             <Link
               href={`/cv#${key}`}
-              className="text-[#FFFFFFB2] hover:text-white font-semibold text-capitalize"
+              className="text-capitalize font-semibold text-[#FFFFFFB2] hover:text-white"
             >
               <Typography>{value}</Typography>
             </Link>

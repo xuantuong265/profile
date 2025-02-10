@@ -64,9 +64,7 @@ const DataTable = <T,>({
               >
                 {columns.map((column, colIndex) => {
                   const cellValue =
-                    column.field === "action"
-                      ? row.action
-                      : row[column.field as keyof T];
+                    column.field === "action" ? row.action : row[column.field];
 
                   return (
                     <TableCell
